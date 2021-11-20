@@ -16,16 +16,15 @@ int inputData (int mat[size][size]){
 }
 
 //2
-int checkEdges(int mat[size][size]){
+void checkEdges(int mat[size][size]){
  int i, j ;
     scanf("%d %d",&i,&j);
     if (mat[i][j] == False){
-        return False;
+        printf("False\n");
     }
     else {
-        return True;
+        printf("True\n");
     }
-
 }
 
 //3
@@ -37,7 +36,6 @@ int bestRoutes (int mat[size][size]){
             bestMat[i][j] = mat[i][j];
         }
     }
-
     for (int k = 0; k < size; k++) {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
@@ -49,20 +47,14 @@ int bestRoutes (int mat[size][size]){
         }
 
     }
-
     int x,y;
     scanf("%d %d",&x,&y);
     if (bestMat[x][y] == False){
-        return noRoute;
+        printf("-1\n");
     }
     else{
-        return bestMat[x][y];
+        printf("%d\n",bestMat[x][y]); 
     }
-
-
-
-
-
 }
 
 

@@ -3,8 +3,6 @@
 
 
 int main() {
-
-
     int mat[size][size];
     int flag= False;
     char input;
@@ -32,15 +30,5 @@ int main() {
         }
 
     }
-
-    inputData(mat);
-    for (int i = 0; i <size ; ++i) {
-        printf("\n");
-        for (int j = 0; j < size; ++j) {
-            printf("%d ",mat[i][j]);
-        }
-    }
-
-
     return 0;
 }
