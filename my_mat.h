@@ -6,9 +6,9 @@
 #define False 0
 #define noRoute -1
 
-int inputData (int mat[size][size] );
+void inputData (int mat[size][size] );
 void checkEdges(int mat[size][size]);
-int bestRoutes(int mat[size][size]);
+void bestRoutes(int mat[size][size]);
 
 
 
