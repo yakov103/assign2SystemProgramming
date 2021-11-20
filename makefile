@@ -9,5 +9,7 @@ main.o: main.c my_mat.h
 my_mat.o: my_mat.c my_mat.h
 	gcc -Wall -g -c my_mat.c
 
+.PHONY: clean all
+
 clean:
 	rm -f *.o connections

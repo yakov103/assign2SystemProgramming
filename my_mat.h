@@ -6,9 +6,10 @@
 #define False 0
 #define noRoute -1
 
-int inputData();
-int checkEdges();
-int bestRoutes();
-int ApplyFloydAlgo();
+void inputData();
+void checkEdges();
+void bestRoutes();
+void ApplyFloydAlgo();
+int getMinValue();
 
 #endif //EX2_SYSO_MY_MAT_H
