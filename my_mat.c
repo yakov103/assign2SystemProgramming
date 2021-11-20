@@ -3,27 +3,23 @@
 
 int mat[size][size];
 
-//1
 void inputData()
 {
-    int input;
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
         {
-            scanf("%d", &input);
-            mat[i][j] = input;
+            scanf("%d", &mat[i][j]);
         }
     }
     ApplyFloydAlgo();
-    }
+}
 
-//2
 void checkEdges()
 {
-    int i, j;
-    scanf("%d%d", &i, &j);
-    if (mat[i][j] != 0)
+    int x, y;
+    scanf("%d%d", &x, &y);
+    if (mat[x][y] != 0)
     {
         printf("True\n");
     }
@@ -33,19 +29,17 @@ void checkEdges()
     }
 }
 
-//3
-
 void bestRoutes()
 {
-    int x, y;
-    scanf("%d%d", &x, &y);
-    if (mat[x][y] == 0)
+    int i, j;
+    scanf("%d%d", &i, &j);
+    if (mat[i][j] == 0 || i == j)
     {
         printf("-1\n");
     }
     else
     {
-        printf("%d\n", mat[x][y]);
+        printf("%d\n", mat[i][j]);
     }
 }
 
@@ -67,38 +61,38 @@ void ApplyFloydAlgo()
                 }
                 else
                 {
-                    int kValue = mat[i][k] + mat[k][j];
+                    int val = mat[i][k] + mat[k][j];
                     if (mat[i][k] == 0 || mat[k][j] == 0)
                     {
-                        mat[i][j] = 0;
+                        val = 0;
                     }
-                    mat[i][j] = getMinValue(mat[i][j], kValue);
+                    mat[i][j] = getMinValue(mat[i][j], val);
                 }
             }
         }
     }
 }
 
-int getMinValue(int leftValue, int rightValue)
+int getMinValue(int leftVal, int rightVal)
 {
-    if (leftValue == 0)
+    if (leftVal == 0)
     {
-        return rightValue;
+        return rightVal;
     }
-    if (rightValue == 0)
+    if (rightVal == 0)
     {
-        return leftValue;
+        return leftVal;
     }
-    if (leftValue == 0 && rightValue == 0)
+    if (leftVal == 0 && rightVal == 0)
     {
         return 0;
     }
-    if (leftValue < rightValue)
+    if (leftVal < rightVal)
     {
-        return leftValue;
+        return leftVal;
     }
     else
     {
-        return rightValue;
+        return rightVal;
     }
 }
