@@ -1,7 +1,7 @@
 all: connections main.o my_mat.o
 
 connections: main.o my_mat.o
-	gcc -Wall -g -o connections main.o my_mat.o -lm
+	gcc -Wall -g -o connections main.o my_mat.o
 
 main.o: main.c my_mat.h
 	gcc -Wall -g -c main.c
