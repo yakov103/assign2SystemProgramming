@@ -15,7 +15,6 @@ int main() {
             case 'B':
                 checkEdges(mat);
                 break;
-
             case 'C':
                 bestRoutes(mat);
                 break;

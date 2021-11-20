@@ -6,14 +6,10 @@
 #define False 0
 #define noRoute -1
 
-void inputData (int mat[size][size] );
-void checkEdges(int mat[size][size]);
-void bestRoutes(int mat[size][size]);
-
-
-
-
-
+int inputData (int mat[size][size] );
+int checkEdges(int mat[size][size]);
+int bestRoutes(int mat[size][size]);
+int ApplyFloydAlgo(int mat[size][size]);
 
 
 #endif //EX2_SYSO_MY_MAT_H
