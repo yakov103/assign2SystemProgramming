@@ -1,4 +1,4 @@
-all: connections main.o my_mat.o
+all: connections main.o my_mat.o libmylib.a
 
 connections: main.o my_mat.o
 	gcc -Wall -g -o connections main.o my_mat.o
@@ -8,6 +8,10 @@ main.o: main.c my_mat.h
 	
 my_mat.o: my_mat.c my_mat.h
 	gcc -Wall -g -c my_mat.c
+
+libmylib.a: main.o my_mat.o
+  ar -rcs libmylib.a my_mat.o main.o
+
 
 .PHONY: clean all
 
