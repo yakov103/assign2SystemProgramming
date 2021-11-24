@@ -12,8 +12,7 @@ my_mat.o: my_mat.c my_mat.h
 libmylib.a: main.o my_mat.o
   ar -rcs libmylib.a my_mat.o main.o
 
-
 .PHONY: clean all
 
 clean:
-	rm -f *.o connections
+	rm -f *.o connections *.a *.so
